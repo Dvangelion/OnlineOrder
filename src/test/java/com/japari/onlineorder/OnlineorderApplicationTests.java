@@ -1,13 +1,15 @@
-package com.japari.onlinorder;
+package com.japari.onlineorder;
+
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+
 @SpringBootTest
-class OnlinorderApplicationTests {
+public class OnlineorderApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
