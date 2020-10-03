@@ -4,7 +4,6 @@ package com.japari.onlineorder.service;
 import com.japari.onlineorder.model.Food;
 import com.japari.onlineorder.repository.FoodRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.annotations.Cache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;

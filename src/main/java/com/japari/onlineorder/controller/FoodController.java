@@ -17,7 +17,7 @@ public class FoodController {
     @Autowired
     private FoodService foodService;
 
-    @GetMapping("/")
+    @GetMapping
     @ResponseBody
     public List<Food> getAll(){
         return foodService.getAllFood();

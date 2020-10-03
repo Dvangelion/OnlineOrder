@@ -12,7 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/foodorder")
+@RequestMapping(path = "/foodorder")
 @Slf4j
 
 public class FoodOrderController {
@@ -21,13 +21,15 @@ public class FoodOrderController {
     @Autowired
     private FoodService foodService;
 
-    @PostMapping("/")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public FoodOrder create(@RequestBody NewOrderRequest newOrder) {
         log.info("Received new order {}", newOrder);
 
-        Food [] foodList = foodService.getFoodByName(newOrder.getItems())
+        Food[] foodList = foodService.getFoodByName(newOrder.getItems())
                 .toArray(new Food[]{});
+
+        log.info("food List {}", foodList);
 
         return foodOrderService.createOrder(newOrder.getCustomer(), foodList);
     }
